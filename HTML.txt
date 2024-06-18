@@ -1,0 +1,95 @@
+ 							HTML Interview Q&A
+
+
+1. What is HTML?
+   HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. HTML is a combination of Hypertext and Markup language. Hypertext defines the link between the web pages. The markup language is used to define the text document within the tag which defines the structure of web pages. HTML is used to structure the website and is therefore used for Web Development.
+
+2. What are Inline Elements and Block-level Elements?
+
+    Inline Elements:
+	An inline element does not start on a new line.
+	An inline element only takes up as much width as necessary.
+	This is a <span> element inside a paragraph.
+	Example:- <span>, <a>, <strong>, <img>, <button>, <em>, <select>, <abbr>, <label>, <sub>, <cite>, <abbr>, <script>, <label>, <i>, 	<input>, <output>, <q>, etc.	
+
+    Block-level Elements:
+	A block-level element always starts on a new line, and the browsers automatically add some space (a margin) before and after the 	element.
+	A block-level element always takes up the full width available (stretches out to the left and right as far as it can).
+	Two commonly used block elements are: <p> and <div>.
+	The <p> element defines a paragraph in an HTML document.
+	The <div> element defines a division or a section in an HTML document.
+	The <p> element is a block-level element.
+	The <div> element is a block-level element.
+	Example:- <div>, <p>, <header>, <footer>, <h1>...<h6>, <form>, <table>, <canvas>, <video>, <blockquote>, <pre>, <ul>, <ol>, 	<figcaption>, <figure>, <hr>, <article>, <section>, etc.
+
+3. What is <!DOCTYPE html>?
+
+   Definition and Usage:
+	All HTML documents must start with a <!DOCTYPE> declaration.
+	The declaration is not an HTML tag. It is an "information" to the browser about what document type to expect.
+	In HTML 5, the declaration is simple:
+	<!DOCTYPE html>
+
+4. What is Meta tag?
+
+   <meta charset="UTF-8">
+   <meta name="description" content="Free Web tutorials">
+   <meta name="keywords" content="HTML, CSS, JavaScript">
+   <meta name="author" content="John Doe">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   Definition and Usage
+	The <meta> tag defines metadata about an HTML document. Metadata is data (information) about data.
+	<meta> tags always go inside the <head> element, and are typically used to specify character set, page description, keywords, 	author of the document, and viewport settings.
+	Metadata will not be displayed on the page, but is machine parsable.
+	Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.
+	There is a method to let web designers take control over the viewport (the user's visible area of a web page), through the <meta> 	tag (See "Setting The Viewport" example below).
+
+5. what is required attribute in html?
+   
+   Definition and Usage:
+	The required attribute is a boolean attribute.
+	When present, it specifies that an input field must be filled out before submitting the form.
+	Note: The required attribute works with the following input types: text, search, url, tel, email, password, date pickers, number, 	checkbox, radio, and file.
+
+6. what are elements and attributes in html?
+
+   HTML Elements:
+	The HTML element is everything from the start tag to the end tag:
+	<tagname>Content goes here...</tagname>
+
+	Examples of some HTML elements:
+	   <h1>My First Heading</h1>
+	   <p>My first paragraph.</p>
+
+   HTML Attributes:
+	All HTML elements can have attributes
+	Attributes provide additional information about elements
+	Attributes are always specified in the start tag
+	Attributes usually come in name/value pairs like: name="value"
+
+7. How to specify the link in HTML and explain the target attribute?
+   HTML provides a hyperlink - <a> tag to specify the links in a webpage. The ‘href’ attribute is used to specify the link and the       ‘target’ attribute is used to specify, where do we want to open the linked document. The ‘target’ attribute can have the following values:
+
+	_self: This is a default value. It opens the document in the same window or tab as it was clicked.
+	_blank: It opens the document in a new window or tab.
+	_parent: It opens the document in a parent frame.
+	_top: It opens the document in a full-body window.
+
+8. Difference between link tag <link> and anchor tag <a>?
+
+   The anchor tag <a> is used to create a hyperlink to another webpage or to a certain part of the webpage and these links are clickable,                  whereas, link tag <link> defines a link between a document and an external resource and these are not clickable.
+
+9. When to use scripts in the head and when to use scripts in the body?
+   If the scripts contain some event-triggered functions or jquery library then we should use them in the head section. If the script writes the content on the page or is not inside a function then it should be placed inside the body section at the bottom. In short, follow below three points:
+
+	Place library scripts or event scripts in the head section.
+	Place normal scripts that do not write anything on the page, in the head section until there is any performance issue.
+	Place scripts that render something on the web page at the bottom of the body section.
+
+10. Are the HTML tags and elements the same thing?
+	No, HTML tags are used to define the structure of a web page, while HTML elements are made up of a set of tags that define a specific part of a web page.
+
+11. How do you create a hyperlink in HTML?
+    We use the anchor tag <a> to create a hyperlink in HTML that links one page to another page. The hyperlink can be added to images      too. 
+

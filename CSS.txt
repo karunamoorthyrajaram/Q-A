@@ -1,0 +1,252 @@
+							CSS Interview Q&A
+
+1. What is CSS?
+   Cascading Style Sheets fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages  presentable. CSS allows you to apply styles to web pages.
+
+   More importantly, CSS enables you to do this independent of the HTML that makes up each web page. CSS is easy to learn and understood,  but it provides powerful control over the presentation of an HTML document.
+
+2. In how many ways can we specify the CSS styles for the HTML element?
+
+   There are three ways in which we can specify the styles for HTML elements:
+
+	Inline: Here we use the ‘style’ attribute inside the HTML element.
+	Internal: Here we use the <style> tag inside the <head> tag. To apply the style we bind the elements using ‘id’ or ‘class’ 	attributes.
+	External: Here we use the <link> tag inside <head> tag to reference the CSS file into our HTML code. Again the binding between 	elements and styles is done using ‘id’ or ‘class’ attributes.
+
+3. What is the difference between HTML and CSS?
+	HTML is used to create the structure and content of a web page, while CSS is used to define the appearance and layout of the page.
+
+4. What is CSS Box Model?
+	The CSS box model is a container that contains multiple properties including borders, margin, padding, and the content itself. It is used to create the design and layout of web pages. It can be used as a toolkit for customizing the layout of different elements. The web browser renders every element as a rectangular box according to the CSS box model.
+
+   Box-Model has multiple properties in CSS. Some of them are given below:
+	borders
+	margins
+	padding
+	Content
+
+   box model property:
+	Border Area: It is the area between the box’s padding and margin. Its dimensions are given by the width and height of the border.
+	Margin Area: This area consists of space between border and margin. The dimensions of the Margin area are the margin-box width and the margin-box height. It is useful to separate the element from its neighbors.
+	Padding Area: It includes the element’s padding. This area is actually the space around the content area and within the border box. Its dimensions are given by the width of the padding-box and the height of the padding-box.
+	Content Area: This area consists of content like text, images, or other media content. It is bounded by the content edge and its  dimensions are given by content box width and height.
+
+5. What are CSS Selectors?
+   CSS Selectors: CSS Selectors are used to selecting HTML elements based on their element name, id, attributes, etc. It can select one or more elements simultaneously.
+
+   element selector: The element selector in CSS is used to select HTML elements which are required to be styled. In a selector declaration, there is the name of the HTML element, and the CSS properties which are to be applied to that element is written inside the brackets {}.
+
+	Syntax:
+	element_name {
+ 	   // CSS Property
+	}
+
+   id selector: The #id selector is used to set the style of the given id. The id attribute is the unique identifier in an HTML document. The id selector is used with a # character.
+
+	Syntax:
+	#id_name { 
+	    // CSS Property
+	}
+
+   class selector: The .class selector is used to select all elements which belong to a particular class attribute. To select the elements with a particular class, use the (.) character with specifying the class name. The class name is mostly used to set the CSS property to the given class.
+
+	Syntax:
+	.class_name {
+ 	   // CSS Property
+	}
+
+6. What is the difference between flexbox and grid?
+   1. Dimensionality and Flexibility:
+
+   Flexbox offers greater control over alignment and space distribution between items. Being one-dimensional, Flexbox only deals with either columns or rows.
+   The grid has two-dimension layout capabilities which allow flexible widths as a unit of length. This compensates for the limitations in Flex.
+   2. Alignment:
+
+   Flex Direction allows developers to align elements vertically or horizontally, which is used when developers create and reverse rows or columns.
+   CSS Grid deploys fractional measure units for grid fluidity and auto-keyword functionality to automatically adjust columns or rows.
+   3. Item Management
+
+   Flex Container is the parent element while Flex Item represents the children. The Flex Container can ensure balanced representation by adjusting item dimensions. This allows developers to design for fluctuating screen sizes.
+   Grid supports both implicit and explicit content placement. Its inbuilt automation allows it to automatically extend line items and copy values into the new creation from the preceding item.
+Property
+
+7. What is CSS flexbox?
+   It is also called a flexible box model. It is basically a layout model that provides an easy and clean way to arrange items within a container. Flexbox is different from the block model which is vertically biased and the inline which is horizontally biased. Flexbox was created for small-scale layouts and there’s another standard called grids which are geared more towards larger-scale layouts, It works similar to the way to Twitter bootstrap grid system works. Flexbox is responsive and mobile-friendly. To start with flexbox firstly create a flex container. To create a flex container set the display property to flex.
+
+	Syntax:
+
+	.main-container {
+	    display: flex;
+	}
+  Flex Properties:
+
+  flex-direction
+  flex-wrap
+  flex-flow
+  justify-content
+  align-items
+  align-content
+
+8. What is CSS Grid?
+   It is a CSS property that offers a grid-based layout system, with rows and columns, making it easier to design web pages without floats and positioning.
+
+6. What does the ‘a’ in rgba mean?
+   RGBA contains A (Alpha) which specifies the transparency of elements. The value of alpha lies between 0.0 to 1.0 where 0.0. represents fully transparent and 1.0 represents not transparent.
+	Syntax:
+	h1 {
+	    color:rgba(R, G, B, A);
+	}
+
+9. What is RWD?
+   Responsive Web Design comprises two words i.e., responsive and web design. Responsive means to respond and web design means to design a website. Therefore, responsive web design generally means the website that responds to or resizes or adjusts itself depending upon the screen size it is being seen through. It automatically adjusts to fit the user’s screen whether it’s desktop, laptop, mobile, tablet, etc. It only uses one layout for a web page and it can be done either using CSS and HTML or CSS3 and HTML5.
+
+10. What is meant by universal selector?
+    The * selector in CSS is used to select all the elements in an HTML document. It also selects all elements which are inside under another element. It is also called the universal selector.
+
+	Syntax:
+	* {
+	    // CSS property
+	} 
+
+11. How can we make our website responsive using CSS?
+    Media query is used to create a responsive web design. It means that the view of a web page differs from system to system based on screen or media types.
+
+    Media queries can be used to check many things:
+
+    width and height of the viewport
+    width and height of the device
+    Orientation
+    Resolution
+    A media query consist of a media type that can contain one or more expression which can be either true or false. The result of the query is true if the specified media matches the type of device the document is displayed on. If the media query is true then a style sheet is applied.
+
+	Syntax:
+	@media not | only mediatype and (expression) {
+	    // Code content
+	}
+
+12. What does display:inline-block do?
+    Inline-block: This feature uses both properties: block and inline. So, this property aligns the div inline but the difference is it can edit the height and the width of the block. Basically, this will align the div both in the block and inline fashion.
+
+13. What does the CSS float property do?
+    Float is a CSS property written in a CSS file or directly in the style of an element. The float property defines the flow of content. Below are the types of floating properties:
+
+	Float type	Usage
+	float: left	Element floats on the left side of the container
+	float: right	Element floats on the right side of the container
+	float: inherit	The element inherits the floating property of its parent (div, table, etc…)
+	float: none	Element is displayed as it is (Default).
+
+14. What is CSS overflow?
+    The CSS overflow controls the big content. It tells whether to clip content or to add scroll bars. The overflow contains the following property:
+
+	visible
+	hidden
+	scroll
+	auto
+    1. Visible: The content is not clipped and is visible outside the element box.
+    2. Hidden: The overflow is clipped and the rest of the content is invisible.
+    3. Scroll: The overflow is clipped but a scrollbar is added to see the rest of the content. The scrollbar can be horizontal or vertical.
+    4. Auto: It automatically adds a scrollbar whenever it is required.
+
+    Overflow-x and Overflow-y: This property specifies how to change the overflow of elements. x deals with horizontal edges and y deals with vertical edges.
+
+15. What are the various positioning properties in CSS?
+    The position property in CSS tells about the method of positioning for an element or an HTML entity. There are five different types of position properties available in CSS:
+
+	Fixed
+	Static
+	Relative
+	Absolute
+	Sticky
+    The positioning of an element can be done using the top, right, bottom, and left properties. These specify the distance of an HTML element from the edge of the viewport. To set the position by these four properties, we have to declare the positioning method.
+
+    Let’s talk about each of these position methods in detail:
+
+    1. Fixed: Any HTML element with position: fixed property will be positioned relative to the viewport. An element with fixed positioning allows it to remain at the same position even as we scroll the page. We can set the position of the element using the top, right, bottom, and left.
+
+    2. Static: This method of positioning is set by default. If we don’t mention the method of positioning for any element, the element has the position: static method by default. By defining Static, the top, right, bottom and left will not have any control over the element. The element will be positioned with the normal flow of the page.
+
+    3. Relative: An element with position: relative is positioned relatively with the other elements which are sitting at top of it. If we set its top, right, bottom, or left, other elements will not fill up the gap left by this element.
+
+    4. Absolute: An element with position: absolute will be positioned with respect to its parent. The positioning of this element does not depend upon its siblings or the elements which are at the same level.
+
+    5. Sticky: Element with position: sticky and top: 0 played a role between fixed & relative based on the position where it is placed. If the element is placed in the middle of the document then when the user scrolls the document, the sticky element starts scrolling until it touches the top. When it touches the top, it will be fixed at that place in spite of further scrolling. We can stick the element at the bottom, with the bottom property.
+
+16. Can we overlap elements in CSS?
+    Creating an overlay effect simply means putting two div together at the same place but both the div appear when needed i.e while hovering or while clicking on one of the div to make the second one appear. Overlays are very clean and give the webpage a tidy look. It looks sophisticated and is simple to design. Overlays can create using two simple CSS properties:
+
+    The z-index property is used to displace elements on the z-axis i.e in or out of the screen. It is used to define the order of elements if they overlap with each other.
+
+	Syntax:
+
+	z-index: auto|number|initial|inherit;
+    The position property in CSS tells about the method of positioning for an element or an HTML entity. 
+
+17. What is the difference between display: none and visibility: hidden?
+    Both of the property is quite useful in CSS. The visibility: “hidden”; property is used to specify whether an element is visible or not in a web document but the hidden elements take up space in the web document. The visibility is a property in CSS that specifies the visibility behavior of an element and display: “none” property is used to specify whether an element is exist or not on the website.
+
+	Syntax:
+
+	Visibility property:
+	visibility: visible| hidden | collapse | initial | inherit;
+	Display property:
+	display: none |  inline | block | inline-block;
+    So, the difference between display: “none”; and visibility: “hidden”;, right from the name itself we can tell the difference as display: “none”, completely gets rids of the tag, as it had never existed in the HTML page whereas visibility: “hidden”;, just makes the tag invisible it will still be on the HTML page occupying space it’s just invisible.
+
+18. How can we hide an element in CSS?
+    The style display property is used to hide and show the content of HTML DOM by accessing the DOM element using JavaScript/jQuery.
+
+	To hide an element, set the style display property to “none”.
+	display: "none";
+
+	To show an element, set the style display property to “block”.
+	display:"block";
+
+    The visibility property is used to hide or show the content of HTML elements. The visibility property specifies that the element is currently visible on the page. The ‘hidden’ value can be used to hide the element. This hides the element but does not remove the space taken by the element, unlike the display property.
+
+	Syntax:
+	visibility : 'hidden';
+	visibility :'visible';
+
+19. What is the difference between CSS border and outline?
+    CSS border properties allow us to set the style, color, and width of the border.
+    CSS outline property allows us to draw a line around the element, outside the border.
+
+    Differences:
+
+      Unlike borders, outlines don’t allow us to set each edge to a different width, or set different colors and styles for each edge. An     outline is the same on all sides.
+      Outlines cannot be circular.
+      Outlines do not take up space, because they are always placed on top of the box of the element.
+
+20. What are the different CSS link states?
+    A link is a connection from one web page to another web page. CSS property can be used to style the links in various different ways.
+
+    States of Link: Before discussing CSS properties, it is important to know the states of a link. Links can exist in different states and they can be styled using pseudo-classes.
+
+    There are four states of links given below:
+	a:link: This is a normal, unvisited link.
+	a:visited: This is a link visited by a user at least once
+	a:hover: This is a link when the mouse hovers over it
+	a:active: This is a link that is just clicked.
+
+21. Can we add an image as a list item marker?
+    To add an image as the list-item marker in a list, we use the list-style-image property in CSS. 
+
+	Syntax:
+
+	list-style-image: none | url | initial | inherit;
+
+22. How can we format text in CSS?
+    CSS text formatting properties are used to format text and style text.
+    CSS text formatting includes the following properties:
+
+	Text-color
+	Text-alignment
+	Text-decoration
+	Text-transformation
+	Text-indentation
+	Letter spacing
+	Line height
+	Text-direction
+	Text-shadow
+	Word spacing

@@ -1,0 +1,311 @@
+							React js Interview Q&A
+
+1. Differentiate between real DOM and virtual DOM?
+   Real DOM is the actual structure represented in the User Interface while Virtual DOM is the memory representation of the same.
+
+2. What is React ?
+   React is a JavaScript library for building user interfaces (UIs) on the web. React is a declarative, component based library that allows developers to build reusable UI components and It follows the Virtual DOM (Document Object Model) approach, which optimizes rendering performance by minimizing DOM updates. React is fast and works well with other tools and libraries.
+
+3. Why React js is used? 
+   Because ReactJs is one of the most widely used front-end JavaScript libraries for creating Web Applications. Around 8,000 businesses around the world have chosen React over other popular libraries and frameworks for building rich user interfaces. React is a Facebook-developed JavaScript package that was used to create Instagram, among other things. It is like a panacea for developers to build user interfaces for websites and apps swiftly. The virtual DOM is the core notion of ReactJs. 
+
+4. How Does ReactJS work?
+   React relies on a virtual DOM, which is a copy of the actual DOM. React's virtual DOM is immediately reloaded to reflect this new change whenever there is a change in the data state. After which, React compares the virtual DOM to the actual DOM to figure out what exactly has changed.
+
+5. What are the features of ReactJS?
+   ReactJS is a JavaScript library designed for crafting dynamic and interactive applications, elevating UI/UX for web and mobile platforms. Operating as an open-source, component-based front-end library, React is dedicated to UI design and streamlines code debugging by employing a component-oriented approach.
+
+6. What is JSX?
+   JSX stands for JavaScript XML.
+   JSX allows us to write HTML in React.
+   JSX makes it easier to write and add HTML in React.
+
+7. How to create components in ReactJS?
+   Components are the building blocks of creating User Interfaces(UI) in React. There are two possible ways to create a component.
+
+   Function Components: This is the simplest way to create a component. Those are pure JavaScript functions that accept props object as the one and only one parameter and return React elements to render the output:
+
+	function Greeting({ message }) {
+	  return <h1>{`Hello, ${message}`}</h1>;
+	}
+   Class Components: You can also use ES6 class to define a component. The above function component can be written as a class component:
+
+	class Greeting extends React.Component {
+	  render() {
+	    return <h1>{`Hello, ${this.props.message}`}</h1>;
+	  }
+	}
+
+8. What are the advantages of ReactJS?
+   Advantage of ReactJS
+	Easy to Learn and USe.
+	Creating Dynamic Web Applications Becomes Easier.
+	Reusable Components.
+	Performance Enhancement.
+	The Support of Handy Tools.
+	Known to be SEO Friendly.
+	The Benefit of Having JavaScript Library.
+	Scope for Testing the Codes.
+
+9. What are forms in ReactJS?
+   Form is a document that stores information of a user on a web server using interactive controls. A form contains different kinds of information such as username, password, contact number, email ID, etc. Creating a form in React is almost similar to that of HTML if we keep it simple and just make a static form
+
+10. How is React different from React Native?
+    React utilizes HTML, CSS, and JavaScript to create interactive user interfaces, whereas React Native utilizes APIs and native UI components to build mobile applications. React. js used a virtual DOM to render browser code in React, whereas React Native uses Native API to render components for mobile applications.
+
+11. What are the advantages of ReactJS?
+
+    Below are the advantages of ReactJS:
+	Increases the application’s performance with Virtual DOM
+	JSX makes code easy to read and write
+	It renders both on the client and server-side
+	Easy to integrate with other frameworks (Angular, BackboneJS) since it is only a view library
+	Easy to write UI Test cases and integration with tools such as JEST.
+
+12. What is the use of refs?
+
+    Refs provide a way to access DOM nodes or React elements created in the render method. They should be avoided in most cases, however, they can be useful when we need direct access to the DOM element or an instance of a component.
+
+    There are a few good use cases for refs:
+	Managing focus, text selection, or media playback.
+	Triggering imperative animations.
+	Integrating with third-party DOM libraries.
+
+    Refs are created using React.createRef() and attached to React elements via the ref attribute. Refs are commonly assigned to an instance property when a component is constructed so they can be referenced throughout the component.
+
+	class MyComponent extends React.Component {
+	  constructor(props) {
+	    super(props);
+	    this.myRef = React.createRef();  }
+	  render() {
+ 	   return <div ref={this.myRef} />;  }
+	}
+
+13. What are props in React?
+
+    Props are inputs to a React component. They are single values or objects containing a set of values that are passed to React Components on creation using a naming convention similar to HTML-tag attributes. i.e, They are data passed down from a parent component to a child component.
+
+    The primary purpose of props in React is to provide the following component functionality:
+	Pass custom data to your React component.
+	Trigger state changes.
+	Use via this.props.reactProp inside component's render() method.
+	For example, let us create an element with reactProp property,
+
+	 <Element reactProp = "1" />
+    This reactProp (or whatever you came up with) the name then becomes a property attached to React's native props object which originally already exists on all components created using React library.
+
+ 	props.reactProp;
+
+
+14. What is Context API in ReactJS?
+
+    Context provides a way to pass data through the component tree without having to pass props down manually at every level.
+    Context is designed to share data that can be considered “global” for a tree of React components, such as the current authenticated user, theme, or preferred language. Using context, we can avoid passing props through intermediate elements.
+
+15. What are React Hooks?
+
+    Hooks are a new addition to React 16.8. They let you use state and other React features without writing a class.
+    With Hooks, you can extract stateful logic from a component so it can be tested independently and reused. Hooks allow you to reuse stateful logic without changing your component hierarchy. This makes it easy to share Hooks among many components or with the community.
+
+16. What are the major features of ReactJS?
+
+    The major features of ReactJS are as follows,
+	It uses VirtualDOM instead RealDOM considering that RealDOM manipulations are expensive.
+	Supports server-side rendering.
+	Follows Unidirectional data flow or data binding.
+	Uses reusable/composable UI components to develop the view.
+
+17. When to use a Class Component over a Function Component?
+    After the addition of Hooks(i.e. React 16.8 onwards) it is always recommended to use Function components over Class components in React. Because you could use state, lifecycle methods and other features that were only available in class component present in function component too.
+
+    But even there are two reasons to use Class components over Function components.
+
+	If you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries.	
+	In older versions, If the component needs state or lifecycle methods then you need to use class component.
+	So the summary to this question is as follows:
+
+    Use Function Components:
+
+	If you don't need state or lifecycle methods, and your component is purely presentational.
+	For simplicity, readability, and modern code practices, especially with the use of React Hooks for state and side effects.
+    Use Class Components:
+
+	If you need to manage state or use lifecycle methods.
+	In scenarios where backward compatibility or integration with older code is necessary.
+Note: You can also use reusable react error boundary third-party component without writing any class. i.e, No need to use class components for Error boundaries.
+
+    The usage of Error boundaries from the above library is quite straight forward.
+
+    Note when using react-error-boundary: ErrorBoundary is a client component. You can only pass props to it that are serializeable or use it in files that have a "use client"; directive.
+
+    "use client";
+
+	import { ErrorBoundary } from "react-error-boundary";
+
+	<ErrorBoundary fallback={<div>Something went wrong</div>}>
+	  <ExampleApplication />
+	</ErrorBoundary>;
+
+18. What are Pure Components?
+    Pure components are the components which render the same output for the same state and props. In function components, you can achieve these pure components through memoized React.memo() API wrapping around the component. This API prevents unnecessary re-renders by comparing the previous props and new props using shallow comparison. So it will be helpful for performance optimizations.
+
+    But at the same time, it won't compare the previous state with the current state because function component itself prevents the unnecessary rendering by default when you set the same state again.
+
+    The syntactic representation of memoized components looks like below,
+
+    const MemoizedComponent = memo(SomeComponent, arePropsEqual?);
+    Below is the example of how child component(i.e., EmployeeProfile) prevents re-renders for the same props passed by parent component(i.e.,EmployeeRegForm).
+
+	import { memo, useState } from "react";
+
+	const EmployeeProfile = memo(function EmployeeProfile({ name, email }) {
+	  return (
+	    <>
+	      <p>Name:{name}</p>
+	      <p>Email: {email}</p>
+	    </>
+	  );
+	});
+	export default function EmployeeRegForm() {
+	  const [name, setName] = useState("");
+	  const [email, setEmail] = useState("");
+	  return (
+	    <>
+	      <label>
+	        Name:{" "}
+	        <input value={name} onChange={(e) => setName(e.target.value)} />
+	      </label>
+	      <label>
+	        Email:{" "}
+	        <input value={email} onChange={(e) => setEmail(e.target.value)} />
+	      </label>
+	      <hr />
+	      <EmployeeProfile name={name} />
+	    </>
+	  );
+	}
+    In the above code, the email prop has not been passed to child component. So there won't be any re-renders for email prop change.
+
+    In class components, the components extending React.PureComponent instead of React.Component become the pure components. When props or state changes, PureComponent will do a shallow comparison on both props and state by invoking shouldComponentUpdate() lifecycle method.
+
+    Note: React.memo() is a higher-order component.
+
+19. What is state in React?
+    State of a component is an object that holds some information that may change over the lifetime of the component. The important point is whenever the state object changes, the component re-renders. It is always recommended to make our state as simple as possible and minimize the number of stateful components.
+
+    state
+
+    Let's take an example of User component with message state. Here, useState hook has been used to add state to the User component and it returns an array with current state and function to update it.
+
+	import { useState } from "react";
+
+	function User() {
+	  const [message, setMessage] = useState("Welcome to React world");
+
+	  return (
+	    <div>
+	      <h1>{message}</h1>
+	    </div>
+	  );
+	}
+    Whenever React calls your component or access useState hook, it gives you a snapshot of the state for that particular render.
+
+    See Class
+    State is similar to props, but it is private and fully controlled by the component ,i.e., it is not accessible to any other component till the owner component decides to pass it.
+
+20. What are props in React?
+Props are inputs to components. They are single values or objects containing a set of values that are passed to components on creation similar to HTML-tag attributes. Here, the data is passed down from a parent component to a child component.
+
+The primary purpose of props in React is to provide following component functionality:
+
+Pass custom data to your component.
+Trigger state changes.
+Use via this.props.reactProp inside component's render() method.
+For example, let us create an element with reactProp property:
+
+<Element reactProp={"1"} />
+This reactProp (or whatever you came up with) attribute name then becomes a property attached to React's native props object which originally already exists on all components created using React library.
+
+props.reactProp;
+For example, the usage of props in function component looks like below:
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+const ChildComponent = (props) => {
+  return (
+    <div>
+      <p>{props.name}</p>
+      <p>{props.age}</p>
+      <p>{props.gender}</p>
+    </div>
+  );
+};
+
+const ParentComponent = () => {
+  return (
+    <div>
+      <ChildComponent name="John" age="30" gender="male" />
+      <ChildComponent name="Mary" age="25" geneder="female" />
+    </div>
+  );
+};
+The properties from props object can be accessed directly using destructing feature from ES6 (ECMAScript 2015). It is also possible to fallback to default value when the prop value is not specified. The above child component can be simplified like below.
+
+const ChildComponent = ({ name, age, gender = "male" }) => {
+  return (
+    <div>
+      <p>{name}</p>
+      <p>{age}</p>
+      <p>{gender}</p>
+    </div>
+  );
+};
+Note: The default value won't be used if you pass null or 0 value. i.e, default value is only used if the prop value is missed or undefined value has been passed.
+
+21. What is the difference between state and props?
+In React, both state and props are plain JavaScript objects and used to manage the data of a component, but they are used in different ways and have different characteristics.
+
+The state entity is managed by the component itself and can be updated using the setter(setState() for class components) function. Unlike props, state can be modified by the component and is used to manage the internal state of the component. Moreover, changes in the state trigger a re-render of the component and its children. The components cannot become reusable with the usage of state alone.
+
+On the otherhand, props (short for "properties") are passed to a component by its parent component and are read-only, meaning that they cannot be modified by the own component itself. Also, props can be used to configure the behavior of a component and to pass data between components. The components become reusable with the usage of props.
+
+22. What are synthetic events in React?
+SyntheticEvent is a cross-browser wrapper around the browser's native event. Its API is same as the browser's native event, including stopPropagation() and preventDefault(), except the events work identically across all browsers. The native events can be accessed directly from synthetic events using nativeEvent attribute.
+
+Let's take an example of BookStore title search component with the ability to get all native event properties
+
+function BookStore() {
+  function handleTitleChange(e) {
+    console.log("The new title is:", e.target.value);
+    // 'e' represents synthetic event
+    const nativeEvent = e.nativeEvent;
+    console.log(nativeEvent);
+    e.stopPropagation();
+    e.preventDefault();
+  }
+
+  return <input name="title" onChange={handleTitleChange} />;
+}
+
+23. What is "key" prop and what is the benefit of using it in arrays of elements?
+A key is a special attribute you should include when mapping over arrays to render data. Key prop helps React identify which items have changed, are added, or are removed.
+
+Keys should be unique among its siblings. Most often we use ID from our data as key:
+
+const todoItems = todos.map((todo) => <li key={todo.id}>{todo.text}</li>);
+When you don't have stable IDs for rendered items, you may use the item index as a key as a last resort:
+
+const todoItems = todos.map((todo, index) => (
+  <li key={index}>{todo.text}</li>
+));
+Note:
+
+Using indexes for keys is not recommended if the order of items may change. This can negatively impact performance and may cause issues with component state.
+If you extract list item as separate component then apply keys on list component instead of li tag.
+There will be a warning message in the console if the key prop is not present on list items.
+The key attribute accepts either string or number and internally convert it as string type.
+Don't generate the key on the fly something like key={Math.random()}. Because the keys will never match up between re-renders and DOM created everytime.
+
+
+
